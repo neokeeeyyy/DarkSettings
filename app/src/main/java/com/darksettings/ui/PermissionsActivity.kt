@@ -105,29 +105,29 @@ class PermissionsActivity : AppCompatActivity() {
         binding.btnCopyAdb.setOnClickListener {
             val adbCommand = """#!/bin/bash
 PACKAGE="com.darksettings"
-adb shell pm grant $PACKAGE android.permission.WRITE_SECURE_SETTINGS
-adb shell pm grant $PACKAGE android.permission.WRITE_SETTINGS
-adb shell pm grant $PACKAGE android.permission.DUMP
-adb shell pm grant $PACKAGE android.permission.PACKAGE_USAGE_STATS
-adb shell pm grant $PACKAGE android.permission.INSTALL_PACKAGES
-adb shell pm grant $PACKAGE android.permission.DELETE_PACKAGES
-adb shell pm grant $PACKAGE android.permission.DEVICE_POWER
-adb shell pm grant $PACKAGE android.permission.REBOOT
-adb shell pm grant $PACKAGE android.permission.STATUS_BAR
-adb shell pm grant $PACKAGE android.permission.EXPAND_STATUS_BAR
-adb shell pm grant $PACKAGE android.permission.CONNECTIVITY_INTERNAL
-adb shell pm grant $PACKAGE android.permission.MANAGE_NETWORK_POLICY
-adb shell pm grant $PACKAGE android.permission.TETHER_PRIVILEGED
-adb shell pm grant $PACKAGE android.permission.NETWORK_SETTINGS
-adb shell pm grant $PACKAGE android.permission.MODIFY_PHONE_STATE
-adb shell pm grant $PACKAGE android.permission.SET_TIME
-adb shell pm grant $PACKAGE android.permission.SET_TIME_ZONE
-adb shell pm grant $PACKAGE android.permission.WRITE_MEDIA_STORAGE
-adb shell pm grant $PACKAGE android.permission.CLEAR_APP_USER_DATA
-adb shell pm grant $PACKAGE android.permission.FORCE_STOP_PACKAGES
-adb shell appops set $PACKAGE android:write_settings allow
-adb shell appops set $PACKAGE android:manage_external_storage allow
-adb shell appops set $PACKAGE android:access_media_location allow
+adb shell pm grant \$PACKAGE android.permission.WRITE_SECURE_SETTINGS
+adb shell pm grant \$PACKAGE android.permission.WRITE_SETTINGS
+adb shell pm grant \$PACKAGE android.permission.DUMP
+adb shell pm grant \$PACKAGE android.permission.PACKAGE_USAGE_STATS
+adb shell pm grant \$PACKAGE android.permission.INSTALL_PACKAGES
+adb shell pm grant \$PACKAGE android.permission.DELETE_PACKAGES
+adb shell pm grant \$PACKAGE android.permission.DEVICE_POWER
+adb shell pm grant \$PACKAGE android.permission.REBOOT
+adb shell pm grant \$PACKAGE android.permission.STATUS_BAR
+adb shell pm grant \$PACKAGE android.permission.EXPAND_STATUS_BAR
+adb shell pm grant \$PACKAGE android.permission.CONNECTIVITY_INTERNAL
+adb shell pm grant \$PACKAGE android.permission.MANAGE_NETWORK_POLICY
+adb shell pm grant \$PACKAGE android.permission.TETHER_PRIVILEGED
+adb shell pm grant \$PACKAGE android.permission.NETWORK_SETTINGS
+adb shell pm grant \$PACKAGE android.permission.MODIFY_PHONE_STATE
+adb shell pm grant \$PACKAGE android.permission.SET_TIME
+adb shell pm grant \$PACKAGE android.permission.SET_TIME_ZONE
+adb shell pm grant \$PACKAGE android.permission.WRITE_MEDIA_STORAGE
+adb shell pm grant \$PACKAGE android.permission.CLEAR_APP_USER_DATA
+adb shell pm grant \$PACKAGE android.permission.FORCE_STOP_PACKAGES
+adb shell appops set \$PACKAGE android:write_settings allow
+adb shell appops set \$PACKAGE android:manage_external_storage allow
+adb shell appops set \$PACKAGE android:access_media_location allow
 echo "Permisos concedidos!" """
 
             val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
