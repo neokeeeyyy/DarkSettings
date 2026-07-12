@@ -470,9 +470,9 @@ class SettingsActivity : AppCompatActivity() {
 
         val locationAccuracy = Settings.Secure.getInt(contentResolver, Settings.Secure.LOCATION_MODE, 0)
         addInfo("Modo de ubicación", when (locationAccuracy) {
-            Settings.Secure.LOCATION_MODE_HIGH_ACCURACY -> "Alta precisión"
-            Settings.Secure.LOCATION_MODE_BALANCED -> "Balanceado"
-            Settings.Secure.LOCATION_MODE_LOW_POWER -> "Ahorro de energía"
+            3 -> "Alta precisión"
+            2 -> "Balanceado"
+            1 -> "Ahorro de energía"
             else -> "Desactivado"
         })
         addDivider()
