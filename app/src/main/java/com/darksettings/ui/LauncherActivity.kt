@@ -1,4 +1,4 @@
-package com.darksettings.ui
+package com.neoconfigurator.ui
 
 import android.content.ComponentName
 import android.content.Intent
@@ -28,7 +28,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.darksettings.R
+import com.neoconfigurator.R
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale

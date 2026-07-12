@@ -1,4 +1,4 @@
-package com.darksettings.ui
+package com.neoconfigurator.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.darksettings.R
-import com.darksettings.databinding.ActivityMainBinding
+import com.neoconfigurator.R
+import com.neoconfigurator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Configuración</string>
+    <string name="app_name">NeoConfigurator</string>
     <string name="permissions_title">Permisos</string>
     <string name="permissions_subtitle">Conceder permisos del sistema</string>
     <string name="wifi_title">Wi-Fi</string>

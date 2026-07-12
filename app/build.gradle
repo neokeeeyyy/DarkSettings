@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.darksettings'
+    namespace 'com.neoconfigurator'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.darksettings"
+        applicationId "com.neoconfigurator"
         minSdk 27
         targetSdk 34
         versionCode 1

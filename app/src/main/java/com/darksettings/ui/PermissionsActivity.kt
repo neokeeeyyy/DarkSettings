@@ -1,4 +1,4 @@
-package com.darksettings.ui
+package com.neoconfigurator.ui
 
 import android.Manifest
 import android.content.ClipData
@@ -14,8 +14,8 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.darksettings.R
-import com.darksettings.databinding.ActivityPermissionsBinding
+import com.neoconfigurator.R
+import com.neoconfigurator.databinding.ActivityPermissionsBinding
 
 class PermissionsActivity : AppCompatActivity() {
 
@@ -93,7 +93,7 @@ class PermissionsActivity : AppCompatActivity() {
         }
 
         binding.btnCopyAdb.setOnClickListener {
-            val pkg = "com.darksettings"
+            val pkg = "com.neoconfigurator"
             val d = "$"
             val adbCommand = """#!/bin/bash
 PACKAGE="$pkg"
@@ -129,7 +129,7 @@ echo "Permisos concedidos!" """
         }
 
         binding.btnCopySingleAdb.setOnClickListener {
-            val command = "adb shell pm grant com.darksettings android.permission.WRITE_SECURE_SETTINGS"
+            val command = "adb shell pm grant com.neoconfigurator android.permission.WRITE_SECURE_SETTINGS"
             val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("ADB Command", command)
             clipboard.setPrimaryClip(clip)
@@ -148,7 +148,7 @@ echo "Permisos concedidos!" """
         val writeSettings = Settings.System.canWrite(this)
         binding.tvWriteSettings.text = if (writeSettings) "✓ Concedido" else "✗ Requiere ADB"
 
-        binding.tvSecureSettings.text = "Requiere: adb shell pm grant com.darksettings android.permission.WRITE_SECURE_SETTINGS"
+        binding.tvSecureSettings.text = "Requiere: adb shell pm grant com.neoconfigurator android.permission.WRITE_SECURE_SETTINGS"
     }
 
     override fun onResume() {

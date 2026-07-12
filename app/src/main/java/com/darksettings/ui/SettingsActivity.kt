@@ -1,4 +1,4 @@
-package com.darksettings.ui
+package com.neoconfigurator.ui
 
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
@@ -24,8 +24,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.darksettings.R
-import com.darksettings.databinding.ActivitySettingsBinding
+import com.neoconfigurator.R
+import com.neoconfigurator.databinding.ActivitySettingsBinding
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.materialswitch.MaterialSwitch
 

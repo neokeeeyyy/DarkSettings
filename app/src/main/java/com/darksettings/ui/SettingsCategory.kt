@@ -1,4 +1,4 @@
-package com.darksettings.ui
+package com.neoconfigurator.ui
 
 data class SettingsCategory(
     val title: String,

@@ -1,4 +1,4 @@
-package com.darksettings.ui
+package com.neoconfigurator.ui
 
 import android.content.ComponentName
 import android.media.session.MediaController

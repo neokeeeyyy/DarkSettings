@@ -146,7 +146,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="adb shell pm grant com.darksettings android.permission.WRITE_SECURE_SETTINGS"
+                android:text="adb shell pm grant com.neoconfigurator android.permission.WRITE_SECURE_SETTINGS"
                 android:textColor="@color/md_theme_primary"
                 android:textSize="11sp"
                 android:fontFamily="monospace"
