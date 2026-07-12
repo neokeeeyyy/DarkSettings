@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private val categories = listOf(
+        SettingsCategory("Permisos", "Conceder permisos del sistema", R.drawable.ic_security, R.color.security_color, "permissions"),
         SettingsCategory("Wi-Fi", "Conexiones y red", R.drawable.ic_wifi, R.color.wifi_color, "wifi"),
         SettingsCategory("Bluetooth", "Dispositivos conectados", R.drawable.ic_bluetooth, R.color.bluetooth_color, "bluetooth"),
         SettingsCategory("Pantalla", "Brillo, fondo de pantalla", R.drawable.ic_display, R.color.display_color, "display"),
@@ -32,11 +33,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = SettingsAdapter(categories) { category ->
-            val intent = Intent(this, SettingsActivity::class.java).apply {
-                putExtra("action", category.action)
-                putExtra("title", category.title)
+            if (category.action == "permissions") {
+                val intent = Intent(this, PermissionsActivity::class.java)
+                startActivity(intent)
+            } else {
+                val intent = Intent(this, SettingsActivity::class.java).apply {
+                    putExtra("action", category.action)
+                    putExtra("title", category.title)
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
         }
     }
 }
