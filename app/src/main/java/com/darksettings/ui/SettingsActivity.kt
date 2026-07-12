@@ -279,7 +279,7 @@ class SettingsActivity : AppCompatActivity() {
         }
         addDivider()
         addInfo("Permisos de apps", "Controlar permisos por app") {
-            startActivity(Intent(Settings.ACTION_MANAGE_PERMISSIONS_SETTINGS))
+            startActivity(Intent(Settings.ACTION_APPLICATION_SETTINGS))
         }
     }
 }
