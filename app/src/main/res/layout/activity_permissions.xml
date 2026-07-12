@@ -44,49 +44,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Permisos de ubicación"
-                android:textColor="@color/md_theme_onSurface"
+                android:text="1. Permisos de aplicación"
+                android:textColor="@color/md_theme_primary"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Necesario para escanear redes Wi-Fi y Bluetooth"
-                android:textColor="@color/text_secondary"
-                android:textSize="12sp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Permisos de hardware"
-                android:textColor="@color/md_theme_onSurface"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cámara, micrófono, almacenamiento, NFC"
-                android:textColor="@color/text_secondary"
-                android:textSize="12sp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Permisos de escritura de configuración"
-                android:textColor="@color/md_theme_onSurface"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Controlar Wi-Fi, Bluetooth, brillo, sonido, etc."
+                android:text="Ubicación, cámara, Bluetooth, almacenamiento, etc."
                 android:textColor="@color/text_secondary"
                 android:textSize="12sp"
                 android:layout_marginBottom="8dp" />
@@ -97,43 +63,33 @@
                 android:layout_height="wrap_content"
                 android:text="Conceder Permisos de Aplicación"
                 android:textAllCaps="false"
-                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 style="@style/Widget.Material3.Button" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnGrantSecure"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Conceder Permisos de Seguridad (WRITE_SECURE_SETTINGS)"
-                android:textAllCaps="false"
-                android:layout_marginTop="8dp"
-                style="@style/Widget.Material3.Button.OutlinedButton" />
+                android:text="2. Permisos de configuración"
+                android:textColor="@color/md_theme_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WRITE_SETTINGS permite controlar brillo, rotación, sonido, etc."
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnGrantSystem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Conceder Permisos de Sistema (WRITE_SETTINGS)"
+                android:text="Conceder WRITE_SETTINGS"
                 android:textAllCaps="false"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 style="@style/Widget.Material3.Button.OutlinedButton" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="WRITE_SECURE_SETTINGS requiere ejecutar este comando por ADB:"
-                android:textColor="@color/text_secondary"
-                android:textSize="12sp"
-                android:layout_marginTop="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="adb shell pm grant com.darksettings android.permission.WRITE_SECURE_SETTINGS"
-                android:textColor="@color/md_theme_primary"
-                android:textSize="12sp"
-                android:fontFamily="monospace"
-                android:layout_marginTop="4dp" />
 
             <TextView
                 android:id="@+id/tvWriteSettings"
@@ -141,14 +97,111 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/md_theme_onSurface"
                 android:textSize="14sp"
-                android:layout_marginTop="16dp" />
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Permisos especiales (requieren ADB)"
+                android:textColor="@color/md_theme_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WRITE_SECURE_SETTINGS permite controlar NFC, ahorro de batería, punto de acceso, y más."
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copia y ejecuta este comando en tu computadora:"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="adb shell pm grant com.darksettings android.permission.WRITE_SECURE_SETTINGS"
+                android:textColor="@color/md_theme_primary"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:background="@color/card_bg"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCopySingleAdb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Copiar Comando ADB"
+                android:textAllCaps="false"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGrantSecure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ir a Configuración de la App"
+                android:textAllCaps="false"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Script completo de ADB"
+                android:textColor="@color/md_theme_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copia el script completo para conceder TODOS los permisos especiales de una vez:"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCopyAdb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Copiar Script ADB Completo"
+                android:textAllCaps="false"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.Material3.Button.TonalButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permisos incluidos en el script:"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• WRITE_SECURE_SETTINGS\n• WRITE_SETTINGS\n• DUMP\n• INSTALL_PACKAGES\n• DELETE_PACKAGES\n• DEVICE_POWER\n• REBOOT\n• STATUS_BAR\n• CONNECTIVITY_INTERNAL\n• MANAGE_NETWORK_POLICY\n• TETHER_PRIVILEGED\n• NETWORK_SETTINGS\n• MODIFY_PHONE_STATE\n• SET_TIME\n• SET_TIME_ZONE\n• CLEAR_APP_USER_DATA\n• FORCE_STOP_PACKAGES"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:background="@color/card_bg"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp" />
 
             <TextView
                 android:id="@+id/tvSecureSettings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/md_theme_onSurface"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:layout_marginTop="8dp" />
 
         </LinearLayout>
