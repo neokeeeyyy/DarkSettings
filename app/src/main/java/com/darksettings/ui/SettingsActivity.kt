@@ -98,9 +98,9 @@ class SettingsActivity : AppCompatActivity() {
         addDivider()
         addInfo("Red Wi-Fi actual", "SSID", wifiManager.connectionInfo?.ssid?.replace("\"", "") ?: "Desconectado")
         addDivider()
-        val scanEnabled = Settings.Global.getInt(contentResolver, Settings.Global.WIFI_SCAN_ALWAYS_ENABLED, 0)
+        val scanEnabled = Settings.Global.getInt(contentResolver, "wifi_scan_always_enabled", 0)
         addToggle("Escaneo Wi-Fi siempre activo", "Escanear redes en segundo plano", scanEnabled == 1) { enabled ->
-            Settings.Global.putInt(contentResolver, Settings.Global.WIFI_SCAN_ALWAYS_ENABLED, if (enabled) 1 else 0)
+            Settings.Global.putInt(contentResolver, "wifi_scan_always_enabled", if (enabled) 1 else 0)
         }
         addDivider()
         val hotspotEnabled = Settings.Global.getInt(contentResolver, "soft_ap_enabled", 0)
