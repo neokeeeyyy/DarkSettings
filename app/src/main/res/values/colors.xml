@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_primary">#FF90CAF9</color>
+    <color name="md_theme_onPrimary">#FF003258</color>
+    <color name="md_theme_primaryContainer">#FF00497D</color>
+    <color name="md_theme_onPrimaryContainer">#FFD1E4FF</color>
+    <color name="md_theme_secondary">#FFBBC7DB</color>
+    <color name="md_theme_onSecondary">#FF253140</color>
+    <color name="md_theme_secondaryContainer">#FF3B4858</color>
+    <color name="md_theme_onSecondaryContainer">#FFD7E3F8</color>
+    <color name="md_theme_tertiary">#FFD6BEE4</color>
+    <color name="md_theme_onTertiary">#FF3B2948</color>
+    <color name="md_theme_tertiaryContainer">#FF523F5F</color>
+    <color name="md_theme_onTertiaryContainer">#FFF2DAFF</color>
+    <color name="md_theme_error">#FFFFB4AB</color>
+    <color name="md_theme_onError">#FF690005</color>
+    <color name="md_theme_errorContainer">#FF93000A</color>
+    <color name="md_theme_onErrorContainer">#FFFFDAD6</color>
+    <color name="md_theme_background">#FF1A1C1E</color>
+    <color name="md_theme_onBackground">#FFE2E2E6</color>
+    <color name="md_theme_surface">#FF1A1C1E</color>
+    <color name="md_theme_onSurface">#FFE2E2E6</color>
+    <color name="md_theme_surfaceVariant">#FF43474E</color>
+    <color name="md_theme_onSurfaceVariant">#FFC3C6CF</color>
+    <color name="md_theme_outline">#FF8D9199</color>
+
+    <color name="card_bg">#FF252729</color>
+    <color name="divider">#FF3A3D42</color>
+    <color name="text_secondary">#FFB0B3BA</color>
+
+    <color name="wifi_color">#FF4FC3F7</color>
+    <color name="bluetooth_color">#FF64B5F6</color>
+    <color name="display_color">#FFFFB74D</color>
+    <color name="sound_color">#FF81C784</color>
+    <color name="battery_color">#FFAED581</color>
+    <color name="storage_color">#FFFF8A65</color>
+    <color name="security_color">#FFE57373</color>
+    <color name="system_color">#FFBA68C8</color>
+    <color name="apps_color">#FF4DD0E1</color>
+</resources>
