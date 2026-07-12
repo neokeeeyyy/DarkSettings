@@ -247,9 +247,9 @@ class SettingsActivity : AppCompatActivity() {
         addInfo("Temperatura", "Batería", "${temperature}°C")
         addDivider()
 
-        val batterySaver = Settings.Global.getInt(contentResolver, Settings.Global.LOW_POWER, 0)
+        val batterySaver = Settings.Global.getInt(contentResolver, "low_power", 0)
         addToggle("Ahorro de batería", "Reducir rendimiento para ahorrar energía", batterySaver == 1) { enabled ->
-            Settings.Global.putInt(contentResolver, Settings.Global.LOW_POWER, if (enabled) 1 else 0)
+            Settings.Global.putInt(contentResolver, "low_power", if (enabled) 1 else 0)
         }
         addDivider()
 
@@ -307,9 +307,9 @@ class SettingsActivity : AppCompatActivity() {
         }
         addDivider()
 
-        val nfcEnabled = Settings.Global.getInt(contentResolver, Settings.Global.NFC_ON, 0)
+        val nfcEnabled = Settings.Global.getInt(contentResolver, "nfc_on", 0)
         addToggle("NFC", "Pagos sin contacto y lectura de etiquetas", nfcEnabled == 1) { enabled ->
-            Settings.Global.putInt(contentResolver, Settings.Global.NFC_ON, if (enabled) 1 else 0)
+            Settings.Global.putInt(contentResolver, "nfc_on", if (enabled) 1 else 0)
         }
         addDivider()
 
@@ -332,21 +332,21 @@ class SettingsActivity : AppCompatActivity() {
         }
         addDivider()
 
-        val animationScale = Settings.Global.getFloat(contentResolver, Settings.Global.ANIMATION_SCALE, 1.0f)
+        val animationScale = Settings.Global.getFloat(contentResolver, "window_animation_scale", 1.0f)
         addInfo("Escala de animación", "Velocidad de animaciones", "${animationScale}x") {
             val intent = Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS)
             startActivity(intent)
         }
         addDivider()
 
-        val transitionScale = Settings.Global.getFloat(contentResolver, Settings.Global.TRANSITION_ANIMATION_SCALE, 1.0f)
+        val transitionScale = Settings.Global.getFloat(contentResolver, "transition_animation_scale", 1.0f)
         addInfo("Escala de transición", "Velocidad de transiciones", "${transitionScale}x") {
             val intent = Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS)
             startActivity(intent)
         }
         addDivider()
 
-        val windowAnimationScale = Settings.Global.getFloat(contentResolver, Settings.Global.WINDOW_ANIMATION_SCALE, 1.0f)
+        val windowAnimationScale = Settings.Global.getFloat(contentResolver, "window_animation_scale", 1.0f)
         addInfo("Escala de ventanas", "Velocidad de ventanas", "${windowAnimationScale}x") {
             val intent = Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS)
             startActivity(intent)
