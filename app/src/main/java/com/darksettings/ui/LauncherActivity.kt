@@ -5,9 +5,11 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.media.AudioManager
+import android.media.MediaMetadata
 import android.media.MediaPlayer
 import android.media.session.MediaController
 import android.media.session.MediaSessionManager
+import android.media.session.PlaybackState
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
@@ -202,10 +204,10 @@ class LauncherActivity : AppCompatActivity() {
         val metadata = controller.metadata
         if (metadata != null) {
             musicPlayer.visibility = View.VISIBLE
-            tvTrackTitle.text = metadata.getString(MediaStore.MediaMetadata.METADATA_KEY_TITLE) ?: "Unknown"
-            tvTrackArtist.text = metadata.getString(MediaStore.MediaMetadata.METADATA_KEY_ARTIST) ?: ""
-            seekBar.max = metadata.getLong(MediaStore.MediaMetadata.METADATA_KEY_DURATION).toInt()
-            seekBar.progress = controller.playbackState?.currentPosition?.toInt() ?: 0
+            tvTrackTitle.text = metadata.getString(MediaMetadata.METADATA_KEY_TITLE) ?: "Unknown"
+            tvTrackArtist.text = metadata.getString(MediaMetadata.METADATA_KEY_ARTIST) ?: ""
+            seekBar.max = metadata.getLong(MediaMetadata.METADATA_KEY_DURATION).toInt()
+            seekBar.progress = controller.playbackState?.position?.toInt() ?: 0
 
             if (isPlaying()) {
                 btnPlayPause.setImageResource(R.drawable.ic_pause)
@@ -218,7 +220,7 @@ class LauncherActivity : AppCompatActivity() {
     }
 
     private fun isPlaying(): Boolean {
-        return currentController?.playbackState?.state == android.media.session.PlaybackState.STATE_PLAYING
+        return currentController?.playbackState?.state == PlaybackState.STATE_PLAYING
     }
 
     private fun setupFocusMode() {
