@@ -58,9 +58,4 @@
         <item name="contentPadding">16dp</item>
     </style>
 
-    <style name="Widget.DarkSettings.Switch" parent="Widget.Material3.Switch">
-        <item name="thumbTint">@color/md_theme_primary</item>
-        <item name="trackTint">@color/md_theme_surfaceVariant</item>
-    </style>
-
 </resources>
