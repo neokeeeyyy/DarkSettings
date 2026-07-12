@@ -2,9 +2,7 @@ package com.darksettings.ui
 
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
-import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
-import android.bluetooth.BluetoothProfile
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -17,10 +15,10 @@ import android.os.Environment
 import android.os.StatFs
 import android.provider.Settings
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -47,7 +45,10 @@ class SettingsActivity : AppCompatActivity() {
         val title = intent.getStringExtra("title") ?: "Configuración"
 
         binding.toolbar.title = title
-        binding.toolbar.setNavigationOnClickListener { finish() }
+        binding.toolbar.setNavigationOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_bottom)
+        }
 
         when (action) {
             "wifi" -> setupWifi()
@@ -100,8 +101,10 @@ class SettingsActivity : AppCompatActivity() {
             setOnClickListener { onClick() }
             layoutParams = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            ).apply { setMargins(16, 8, 16, 8) }
+                52.dp
+            ).apply { setMargins(0, 8, 0, 8) }
+            textSize = 14f
+            cornerRadius = 12.dp
         }
         binding.content.addView(button)
     }
@@ -110,8 +113,9 @@ class SettingsActivity : AppCompatActivity() {
         val textView = TextView(this).apply {
             text = title
             setTextColor(getColor(R.color.md_theme_primary))
-            textSize = 14f
-            setPadding(16, 24, 16, 8)
+            textSize = 12f
+            letterSpacing = 0.1f
+            setPadding(0, 24, 0, 8)
         }
         binding.content.addView(textView)
     }
@@ -120,11 +124,14 @@ class SettingsActivity : AppCompatActivity() {
         val divider = View(this).apply {
             layoutParams = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT, 1
-            ).apply { setMargins(16, 8, 16, 8) }
+            ).apply { setMargins(0, 4, 0, 4) }
             setBackgroundColor(getColor(R.color.divider))
         }
         binding.content.addView(divider)
     }
+
+    private val Int.dp: Int
+        get() = (this * resources.displayMetrics.density).toInt()
 
     private fun setupWifi() {
         @Suppress("DEPRECATION")

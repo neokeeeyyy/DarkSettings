@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Configuración</string>
+    <string name="permissions_title">Permisos</string>
+    <string name="permissions_subtitle">Conceder permisos del sistema</string>
+    <string name="wifi_title">Wi-Fi</string>
+    <string name="wifi_subtitle">Conexiones y red</string>
+    <string name="bluetooth_title">Bluetooth</string>
+    <string name="bluetooth_subtitle">Dispositivos conectados</string>
+    <string name="display_title">Pantalla</string>
+    <string name="display_subtitle">Brillo, fondo de pantalla</string>
+    <string name="sound_title">Sonido</string>
+    <string name="sound_subtitle">Volumen, tonos, vibración</string>
+    <string name="battery_title">Batería</string>
+    <string name="battery_subtitle">Uso de batería, ahorro</string>
+    <string name="storage_title">Almacenamiento</string>
+    <string name="storage_subtitle">Espacio del dispositivo</string>
+    <string name="security_title">Seguridad</string>
+    <string name="security_subtitle">Bloqueo de pantalla, ubicación</string>
+    <string name="system_title">Sistema</string>
+    <string name="system_subtitle">Fecha, idioma, información</string>
+    <string name="apps_title">Aplicaciones</string>
+    <string name="apps_subtitle">Apps instaladas, permisos</string>
 </resources>

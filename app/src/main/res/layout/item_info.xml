@@ -5,14 +5,21 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center_vertical"
-    android:padding="16dp"
-    android:background="?attr/selectableItemBackground">
+    android:minHeight="56dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginEnd="16dp">
 
         <TextView
             android:id="@+id/title"
@@ -37,6 +44,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/md_theme_primary"
         android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
         android:visibility="gone" />
 
 </LinearLayout>

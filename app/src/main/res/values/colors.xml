@@ -1,40 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="md_theme_primary">#FF90CAF9</color>
-    <color name="md_theme_onPrimary">#FF003258</color>
-    <color name="md_theme_primaryContainer">#FF00497D</color>
-    <color name="md_theme_onPrimaryContainer">#FFD1E4FF</color>
-    <color name="md_theme_secondary">#FFBBC7DB</color>
-    <color name="md_theme_onSecondary">#FF253140</color>
-    <color name="md_theme_secondaryContainer">#FF3B4858</color>
-    <color name="md_theme_onSecondaryContainer">#FFD7E3F8</color>
-    <color name="md_theme_tertiary">#FFD6BEE4</color>
-    <color name="md_theme_onTertiary">#FF3B2948</color>
-    <color name="md_theme_tertiaryContainer">#FF523F5F</color>
-    <color name="md_theme_onTertiaryContainer">#FFF2DAFF</color>
+    <!-- Monochromatic Gray Theme - Material Design 3 -->
+    <color name="md_theme_primary">#FFD0D0D0</color>
+    <color name="md_theme_onPrimary">#FF1A1A1A</color>
+    <color name="md_theme_primaryContainer">#FF3A3A3A</color>
+    <color name="md_theme_onPrimaryContainer">#FFE8E8E8</color>
+    <color name="md_theme_secondary">#FFB8B8B8</color>
+    <color name="md_theme_onSecondary">#FF1A1A1A</color>
+    <color name="md_theme_secondaryContainer">#FF2E2E2E</color>
+    <color name="md_theme_onSecondaryContainer">#FFD8D8D8</color>
+    <color name="md_theme_tertiary">#FFC8C8C8</color>
+    <color name="md_theme_onTertiary">#FF1A1A1A</color>
+    <color name="md_theme_tertiaryContainer">#FF333333</color>
+    <color name="md_theme_onTertiaryContainer">#FFE0E0E0</color>
     <color name="md_theme_error">#FFFFB4AB</color>
     <color name="md_theme_onError">#FF690005</color>
     <color name="md_theme_errorContainer">#FF93000A</color>
     <color name="md_theme_onErrorContainer">#FFFFDAD6</color>
-    <color name="md_theme_background">#FF1A1C1E</color>
-    <color name="md_theme_onBackground">#FFE2E2E6</color>
-    <color name="md_theme_surface">#FF1A1C1E</color>
-    <color name="md_theme_onSurface">#FFE2E2E6</color>
-    <color name="md_theme_surfaceVariant">#FF43474E</color>
-    <color name="md_theme_onSurfaceVariant">#FFC3C6CF</color>
-    <color name="md_theme_outline">#FF8D9199</color>
+    <color name="md_theme_background">#FF121212</color>
+    <color name="md_theme_onBackground">#FFE0E0E0</color>
+    <color name="md_theme_surface">#FF181818</color>
+    <color name="md_theme_onSurface">#FFE0E0E0</color>
+    <color name="md_theme_surfaceVariant">#FF2A2A2A</color>
+    <color name="md_theme_onSurfaceVariant">#FFB0B0B0</color>
+    <color name="md_theme_outline">#FF505050</color>
+    <color name="md_theme_outlineVariant">#FF3A3A3A</color>
 
-    <color name="card_bg">#FF252729</color>
-    <color name="divider">#FF3A3D42</color>
-    <color name="text_secondary">#FFB0B3BA</color>
+    <color name="card_bg">#FF1E1E1E</color>
+    <color name="card_bg_pressed">#FF282828</color>
+    <color name="divider">#FF2E2E2E</color>
+    <color name="text_secondary">#FF999999</color>
+    <color name="text_tertiary">#FF666666</color>
 
-    <color name="wifi_color">#FF4FC3F7</color>
-    <color name="bluetooth_color">#FF64B5F6</color>
-    <color name="display_color">#FFFFB74D</color>
-    <color name="sound_color">#FF81C784</color>
-    <color name="battery_color">#FFAED581</color>
-    <color name="storage_color">#FFFF8A65</color>
-    <color name="security_color">#FFE57373</color>
-    <color name="system_color">#FFBA68C8</color>
-    <color name="apps_color">#FF4DD0E1</color>
+    <!-- Gray tones for icons -->
+    <color name="icon_wifi">#FFC0C0C0</color>
+    <color name="icon_bluetooth">#FFB0B0B0</color>
+    <color name="icon_display">#FFD0D0D0</color>
+    <color name="icon_sound">#FFA0A0A0</color>
+    <color name="icon_battery">#FFB8B8B8</color>
+    <color name="icon_storage">#FFA8A8A8</color>
+    <color name="icon_security">#FFC8C8C8</color>
+    <color name="icon_system">#FFB5B5B5</color>
+    <color name="icon_apps">#FFAAAAAA</color>
+
+    <!-- Accent gray for interactive elements -->
+    <color name="accent_gray">#FFD8D8D8</color>
+    <color name="accent_gray_dim">#FF888888</color>
+    <color name="ripple_color">#20FFFFFF</color>
+    <color name="surface_elevated">#FF222222</color>
+    <color name="surface_elevated_2">#FF282828</color>
 </resources>

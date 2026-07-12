@@ -4,6 +4,7 @@ import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -14,6 +15,8 @@ class SettingsAdapter(
     private val categories: List<SettingsCategory>,
     private val onClick: (SettingsCategory) -> Unit
 ) : RecyclerView.Adapter<SettingsAdapter.ViewHolder>() {
+
+    private var lastAnimatedPosition = -1
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val icon: ImageView = view.findViewById(R.id.icon)
@@ -37,7 +40,18 @@ class SettingsAdapter(
         bg?.setColor(ContextCompat.getColor(holder.itemView.context, category.colorRes))
 
         holder.itemView.setOnClickListener { onClick(category) }
+
+        if (position > lastAnimatedPosition) {
+            val animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.slide_in_bottom)
+            animation.startOffset = (position * 50).toLong()
+            holder.itemView.startAnimation(animation)
+            lastAnimatedPosition = position
+        }
     }
 
     override fun getItemCount() = categories.size
+
+    override fun onViewDetachedFromWindow(holder: ViewHolder) {
+        holder.itemView.clearAnimation()
+    }
 }
